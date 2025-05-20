@@ -1,0 +1,109 @@
+|Multiplicador
+Clk => Clk.IN3
+St => St.IN1
+Multiplicando[0] => Multiplicando[0].IN1
+Multiplicando[1] => Multiplicando[1].IN1
+Multiplicando[2] => Multiplicando[2].IN1
+Multiplicando[3] => Multiplicando[3].IN1
+Multiplicador[0] => Multiplicador[0].IN1
+Multiplicador[1] => Multiplicador[1].IN1
+Multiplicador[2] => Multiplicador[2].IN1
+Multiplicador[3] => Multiplicador[3].IN1
+Done <= CONTROL:U2.Done
+Idle <= CONTROL:U2.Idle
+Produto[0] <= M.DB_MAX_OUTPUT_PORT_TYPE
+Produto[1] <= ACC:U0.Saidas
+Produto[2] <= ACC:U0.Saidas
+Produto[3] <= ACC:U0.Saidas
+Produto[4] <= saidas[4].DB_MAX_OUTPUT_PORT_TYPE
+Produto[5] <= saidas[5].DB_MAX_OUTPUT_PORT_TYPE
+Produto[6] <= saidas[6].DB_MAX_OUTPUT_PORT_TYPE
+Produto[7] <= saidas[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|ACC:U0
+Load => always0.IN0
+Load => always0.IN0
+Load => always0.IN0
+Sh => always0.IN1
+Sh => always0.IN1
+Sh => always0.IN1
+Ad => always0.IN1
+Ad => always0.IN1
+Ad => always0.IN1
+Clk => acc_reg[0].CLK
+Clk => acc_reg[1].CLK
+Clk => acc_reg[2].CLK
+Clk => acc_reg[3].CLK
+Clk => acc_reg[4].CLK
+Clk => acc_reg[5].CLK
+Clk => acc_reg[6].CLK
+Clk => acc_reg[7].CLK
+Clk => acc_reg[8].CLK
+Entradas[0] => acc_reg.DATAB
+Entradas[1] => acc_reg.DATAB
+Entradas[2] => acc_reg.DATAB
+Entradas[3] => acc_reg.DATAB
+Entradas[4] => acc_reg.DATAB
+Entradas[5] => acc_reg.DATAB
+Entradas[6] => acc_reg.DATAB
+Entradas[7] => acc_reg.DATAB
+Entradas[8] => acc_reg.DATAB
+Saidas[0] <= acc_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+Saidas[1] <= acc_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+Saidas[2] <= acc_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+Saidas[3] <= acc_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+Saidas[4] <= acc_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+Saidas[5] <= acc_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+Saidas[6] <= acc_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+Saidas[7] <= acc_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+Saidas[8] <= acc_reg[8].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Adder:U1
+OperandoA[0] => Add0.IN4
+OperandoA[1] => Add0.IN3
+OperandoA[2] => Add0.IN2
+OperandoA[3] => Add0.IN1
+OperandoB[0] => Add0.IN8
+OperandoB[1] => Add0.IN7
+OperandoB[2] => Add0.IN6
+OperandoB[3] => Add0.IN5
+Soma[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+Soma[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+Soma[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+Soma[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+Soma[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|CONTROL:U2
+Clk => Done~reg0.CLK
+Clk => Ad~reg0.CLK
+Clk => Sh~reg0.CLK
+Clk => Load~reg0.CLK
+Clk => Idle~reg0.CLK
+Clk => state~2.DATAIN
+K => state.DATAB
+K => Selector1.IN1
+St => Load.DATAB
+St => Selector1.IN3
+St => Selector0.IN2
+M => Ad.DATAB
+Idle <= Idle~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Done <= Done~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Load <= Load~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Sh <= Sh~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Ad <= Ad~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Counter:U3
+Load => count[0].ACLR
+Load => count[1].ACLR
+Load => count[2].ACLR
+Load => K.IN1
+Clk => count[0].CLK
+Clk => count[1].CLK
+Clk => count[2].CLK
+K <= K.DB_MAX_OUTPUT_PORT_TYPE
+
+
