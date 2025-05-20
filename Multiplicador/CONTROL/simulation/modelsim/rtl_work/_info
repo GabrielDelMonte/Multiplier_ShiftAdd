@@ -1,0 +1,56 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/CONTROL/simulation/modelsim
+vCONTROL
+!s110 1747784182
+!i10b 1
+!s100 <J[G?AicOY;z^BLUPYXah2
+Im7E4JDUickZ@k@i:06ljk0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1747706002
+8/home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/CONTROL/CONTROL.v
+F/home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/CONTROL/CONTROL.v
+L0 1
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z3 !s108 1747784182.000000
+!s107 /home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/CONTROL/CONTROL.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/CONTROL|/home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/CONTROL/CONTROL.v|
+!i113 1
+Z4 o-vlog01compat -work work
+Z5 !s92 -vlog01compat -work work +incdir+/home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/CONTROL
+Z6 tCvgOpt 0
+n@c@o@n@t@r@o@l
+vCONTROL_TB
+!s110 1747784183
+!i10b 1
+!s100 2Z2JK;?ij`aQGzc?iEFca3
+I@HjS9j0@JUCgTn6`Bl4`U3
+R1
+R0
+w1747750922
+8/home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/CONTROL/CONTROL_TB.v
+F/home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/CONTROL/CONTROL_TB.v
+L0 3
+R2
+r1
+!s85 0
+31
+R3
+!s107 /home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/CONTROL/CONTROL_TB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/CONTROL|/home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/CONTROL/CONTROL_TB.v|
+!i113 1
+R4
+R5
+R6
+n@c@o@n@t@r@o@l_@t@b

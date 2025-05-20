@@ -1,0 +1,20 @@
+|CONTROL
+Clk => Done~reg0.CLK
+Clk => Ad~reg0.CLK
+Clk => Sh~reg0.CLK
+Clk => Load~reg0.CLK
+Clk => Idle~reg0.CLK
+Clk => state~2.DATAIN
+K => state.DATAB
+K => Selector1.IN1
+St => Load.DATAB
+St => Selector1.IN3
+St => Selector0.IN2
+M => Ad.DATAB
+Idle << Idle~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Done << Done~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Load << Load~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Sh << Sh~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Ad << Ad~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
