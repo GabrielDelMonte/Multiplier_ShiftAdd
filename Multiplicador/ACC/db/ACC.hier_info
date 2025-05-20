@@ -1,0 +1,39 @@
+|ACC
+Load => always0.IN0
+Load => always0.IN0
+Load => always0.IN0
+Sh => always0.IN1
+Sh => always0.IN1
+Sh => always0.IN1
+Ad => always0.IN1
+Ad => always0.IN1
+Ad => always0.IN1
+Clk => acc_reg[0].CLK
+Clk => acc_reg[1].CLK
+Clk => acc_reg[2].CLK
+Clk => acc_reg[3].CLK
+Clk => acc_reg[4].CLK
+Clk => acc_reg[5].CLK
+Clk => acc_reg[6].CLK
+Clk => acc_reg[7].CLK
+Clk => acc_reg[8].CLK
+Entradas[0] => acc_reg.DATAB
+Entradas[1] => acc_reg.DATAB
+Entradas[2] => acc_reg.DATAB
+Entradas[3] => acc_reg.DATAB
+Entradas[4] => acc_reg.DATAB
+Entradas[5] => acc_reg.DATAB
+Entradas[6] => acc_reg.DATAB
+Entradas[7] => acc_reg.DATAB
+Entradas[8] => acc_reg.DATAB
+Saidas[0] << acc_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+Saidas[1] << acc_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+Saidas[2] << acc_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+Saidas[3] << acc_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+Saidas[4] << acc_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+Saidas[5] << acc_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+Saidas[6] << acc_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+Saidas[7] << acc_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+Saidas[8] << acc_reg[8].DB_MAX_OUTPUT_PORT_TYPE
+
+

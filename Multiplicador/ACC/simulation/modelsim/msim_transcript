@@ -1,0 +1,70 @@
+# ERROR: No extended dataflow license exists
+# do ACC_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying /home/gabriel/Documents/Programas/Quartus/Quartus/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+/home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/ACC {/home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/ACC/ACC.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:25:02 on May 20,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/ACC" /home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/ACC/ACC.v 
+# -- Compiling module ACC
+# 
+# Top level modules:
+# 	ACC
+# End time: 09:25:02 on May 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+/home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/ACC {/home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/ACC/ACC_TB.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:25:02 on May 20,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/ACC" /home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/ACC/ACC_TB.v 
+# -- Compiling module ACC_TB
+# 
+# Top level modules:
+# 	ACC_TB
+# End time: 09:25:02 on May 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  ACC_TB
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" ACC_TB 
+# Start time: 09:25:02 on May 20,2025
+# Loading work.ACC_TB
+# Loading work.ACC
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/libpthread.so.0 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/librt.so.1 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/libdl.so.2 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/libm.so.6 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/libc.so.6 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/ld-linux.so.2 : module was loaded at an absolute address.
+# 
+# [20000] Starting Load Test
+# [31000] Data Loaded: Input=  7, Output=  7
+# 
+# [40000] Starting Shift Test
+# [51000] After Shift: Output=  3
+# 
+# [60000] Starting Add Test
+# [71000] After Add: Output=195
+# ** Note: $finish    : /home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/ACC/ACC_TB.v(42)
+#    Time: 101 ns  Iteration: 0  Instance: /ACC_TB
+# 1
+# Break in Module ACC_TB at /home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/ACC/ACC_TB.v line 42
+# 
+# stdin: <EOF>
+# End time: 09:33:22 on May 20,2025, Elapsed time: 0:08:20
+# Errors: 0, Warnings: 7
