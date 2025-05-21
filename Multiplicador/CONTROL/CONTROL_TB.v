@@ -71,7 +71,6 @@ module CONTROL_TB();
 			St = 1;
 			$display("\n[%0t] Starting - Set St=1", $time);
 			@(posedge Clk);
-			#1;
 			$display("[%0t] State: Idle=%b Load=%b", $time, Idle, Load);
 			St = 0;
 		end
@@ -83,7 +82,6 @@ module CONTROL_TB();
 			M = val;
 			$display("\n[%0t] M_Test with M=%b", $time, M);
 			@(posedge Clk);
-			#1;
 			$display("[%0t] State: Ad=%b", $time, Ad);
 		end
 	endtask
@@ -92,7 +90,6 @@ module CONTROL_TB();
 		begin
 			$display("\n[%0t] Advancing to Sh", $time);
 			@(posedge Clk);
-			#1;
 			$display("[%0t] State: Sh=%b", $time, Sh);
 		end
 	endtask
@@ -103,7 +100,6 @@ module CONTROL_TB();
 			K = val;
 			$display("\n[%0t] K_Test with K=%b", $time, K);
 			@(posedge Clk);
-			#1;
 			$display("[%0t] State: Done=%b", $time, Done);
 			K = 0;
 		end
@@ -112,7 +108,6 @@ module CONTROL_TB();
 	task Idle_Check;
 		begin
 			@(posedge Clk);
-			#1;
 			$display("\n[%0t] Final Idle State: Idle=%b", $time, Idle);
 		end
 	endtask

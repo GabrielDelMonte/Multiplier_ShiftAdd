@@ -9,16 +9,16 @@ Multiplicador[0] => Multiplicador[0].IN1
 Multiplicador[1] => Multiplicador[1].IN1
 Multiplicador[2] => Multiplicador[2].IN1
 Multiplicador[3] => Multiplicador[3].IN1
-Done <= CONTROL:U2.Done
-Idle <= CONTROL:U2.Idle
-Produto[0] <= M.DB_MAX_OUTPUT_PORT_TYPE
-Produto[1] <= ACC:U0.Saidas
-Produto[2] <= ACC:U0.Saidas
-Produto[3] <= ACC:U0.Saidas
-Produto[4] <= saidas[4].DB_MAX_OUTPUT_PORT_TYPE
-Produto[5] <= saidas[5].DB_MAX_OUTPUT_PORT_TYPE
-Produto[6] <= saidas[6].DB_MAX_OUTPUT_PORT_TYPE
-Produto[7] <= saidas[7].DB_MAX_OUTPUT_PORT_TYPE
+Done << CONTROL:U2.Done
+Idle << CONTROL:U2.Idle
+Produto[0] << M.DB_MAX_OUTPUT_PORT_TYPE
+Produto[1] << ACC:U0.Saidas
+Produto[2] << ACC:U0.Saidas
+Produto[3] << ACC:U0.Saidas
+Produto[4] << saidas[4].DB_MAX_OUTPUT_PORT_TYPE
+Produto[5] << saidas[5].DB_MAX_OUTPUT_PORT_TYPE
+Produto[6] << saidas[6].DB_MAX_OUTPUT_PORT_TYPE
+Produto[7] << saidas[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Multiplicador|ACC:U0
@@ -77,33 +77,29 @@ Soma[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Multiplicador|CONTROL:U2
-Clk => Done~reg0.CLK
-Clk => Ad~reg0.CLK
-Clk => Sh~reg0.CLK
-Clk => Load~reg0.CLK
-Clk => Idle~reg0.CLK
-Clk => state~2.DATAIN
+Clk => state~1.DATAIN
 K => state.DATAB
 K => Selector1.IN1
 St => Load.DATAB
 St => Selector1.IN3
 St => Selector0.IN2
 M => Ad.DATAB
-Idle <= Idle~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Done <= Done~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Load <= Load~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Sh <= Sh~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Ad <= Ad~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Idle <= Idle.DB_MAX_OUTPUT_PORT_TYPE
+Done <= Done.DB_MAX_OUTPUT_PORT_TYPE
+Load <= Load.DB_MAX_OUTPUT_PORT_TYPE
+Sh <= Sh.DB_MAX_OUTPUT_PORT_TYPE
+Ad <= Ad.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Multiplicador|Counter:U3
-Load => count[0].ACLR
-Load => count[1].ACLR
-Load => count[2].ACLR
-Load => K.IN1
+Load => count.OUTPUTSELECT
+Load => count.OUTPUTSELECT
+Load => count.OUTPUTSELECT
+Load => K.OUTPUTSELECT
+Clk => K~reg0.CLK
 Clk => count[0].CLK
 Clk => count[1].CLK
 Clk => count[2].CLK
-K <= K.DB_MAX_OUTPUT_PORT_TYPE
+K <= K~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

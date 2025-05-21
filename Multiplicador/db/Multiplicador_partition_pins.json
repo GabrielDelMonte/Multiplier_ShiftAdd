@@ -48,6 +48,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "St",
+					"strict" : false
+				},
+				{
 					"name" : "Multiplicador[0]",
 					"strict" : false
 				},
@@ -77,10 +81,6 @@
 				},
 				{
 					"name" : "Multiplicando[3]",
-					"strict" : false
-				},
-				{
-					"name" : "St",
 					"strict" : false
 				}
 			]

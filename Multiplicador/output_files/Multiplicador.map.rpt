@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Multiplicador
-Mon May 19 22:54:52 2025
+Tue May 20 22:16:55 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -47,15 +47,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon May 19 22:54:52 2025       ;
+; Analysis & Synthesis Status        ; Successful - Tue May 20 22:16:55 2025       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Multiplicador                               ;
 ; Top-level Entity Name              ; Multiplicador                               ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 31                                          ;
-;     Total combinational functions  ; 28                                          ;
-;     Dedicated logic registers      ; 21                                          ;
-; Total registers                    ; 21                                          ;
+; Total logic elements               ; 27                                          ;
+;     Total combinational functions  ; 26                                          ;
+;     Dedicated logic registers      ; 17                                          ;
+; Total registers                    ; 17                                          ;
 ; Total pins                         ; 20                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -188,20 +188,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 31        ;
+; Estimated Total logic elements              ; 27        ;
 ;                                             ;           ;
-; Total combinational functions               ; 28        ;
+; Total combinational functions               ; 26        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 7         ;
-;     -- 3 input functions                    ; 14        ;
-;     -- <=2 input functions                  ; 7         ;
+;     -- 4 input functions                    ; 16        ;
+;     -- 3 input functions                    ; 6         ;
+;     -- <=2 input functions                  ; 4         ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 24        ;
+;     -- normal mode                          ; 22        ;
 ;     -- arithmetic mode                      ; 4         ;
 ;                                             ;           ;
-; Total registers                             ; 21        ;
-;     -- Dedicated logic registers            ; 21        ;
+; Total registers                             ; 17        ;
+;     -- Dedicated logic registers            ; 17        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 20        ;
@@ -209,9 +209,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; Clk~input ;
-; Maximum fan-out                             ; 21        ;
-; Total fan-out                               ; 163       ;
-; Average fan-out                             ; 1.83      ;
+; Maximum fan-out                             ; 17        ;
+; Total fan-out                               ; 159       ;
+; Average fan-out                             ; 1.92      ;
 +---------------------------------------------+-----------+
 
 
@@ -220,11 +220,11 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name       ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------+-------------+--------------+
-; |Multiplicador             ; 28 (0)              ; 21 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 20   ; 0            ; 0          ; |Multiplicador            ;             ;              ;
-;    |ACC:U0|                ; 13 (13)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Multiplicador|ACC:U0     ; ACC         ; work         ;
+; |Multiplicador             ; 26 (0)              ; 17 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 20   ; 0            ; 0          ; |Multiplicador            ;             ;              ;
+;    |ACC:U0|                ; 12 (12)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Multiplicador|ACC:U0     ; ACC         ; work         ;
 ;    |Adder:U1|              ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Multiplicador|Adder:U1   ; Adder       ; work         ;
-;    |CONTROL:U2|            ; 7 (7)               ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Multiplicador|CONTROL:U2 ; CONTROL     ; work         ;
-;    |Counter:U3|            ; 3 (3)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Multiplicador|Counter:U3 ; Counter     ; work         ;
+;    |CONTROL:U2|            ; 5 (5)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Multiplicador|CONTROL:U2 ; CONTROL     ; work         ;
+;    |Counter:U3|            ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Multiplicador|Counter:U3 ; Counter     ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -247,8 +247,8 @@ Encoding Type:  One-Hot
 +---------------------------------------+--------------------+
 ; Register name                         ; Reason for Removal ;
 +---------------------------------------+--------------------+
+; CONTROL:U2|state~2                    ; Lost fanout        ;
 ; CONTROL:U2|state~3                    ; Lost fanout        ;
-; CONTROL:U2|state~4                    ; Lost fanout        ;
 ; Total Number of Removed Registers = 2 ;                    ;
 +---------------------------------------+--------------------+
 
@@ -258,24 +258,25 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 21    ;
+; Total registers                              ; 17    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 3     ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 8     ;
+; Number of registers using Clock Enable       ; 7     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Multiplicador|ACC:U0|acc_reg[0] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Multiplicador|ACC:U0|acc_reg[4] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Multiplicador|Counter:U3|count[0] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Multiplicador|ACC:U0|acc_reg[0]   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Multiplicador|ACC:U0|acc_reg[4]   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
 
 
 +---------------------------------------------------------+
@@ -306,22 +307,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 20                          ;
-; cycloneiii_ff         ; 21                          ;
-;     CLR               ; 3                           ;
-;     ENA               ; 8                           ;
+; cycloneiii_ff         ; 17                          ;
+;     ENA               ; 7                           ;
 ;     plain             ; 10                          ;
-; cycloneiii_lcell_comb ; 28                          ;
+; cycloneiii_lcell_comb ; 27                          ;
 ;     arith             ; 4                           ;
 ;         3 data inputs ; 4                           ;
-;     normal            ; 24                          ;
+;     normal            ; 23                          ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 10                          ;
-;         4 data inputs ; 7                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 16                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.40                        ;
-; Average LUT depth     ; 1.64                        ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.87                        ;
 +-----------------------+-----------------------------+
 
 
@@ -340,7 +340,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon May 19 22:54:45 2025
+    Info: Processing started: Tue May 20 22:16:47 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Multiplicador -c Multiplicador
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -354,24 +354,26 @@ Info (12021): Found 1 design units, including 1 entities, in source file ACC/ACC
     Info (12023): Found entity 1: ACC File: /home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/ACC/ACC.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file Multiplicador.v
     Info (12023): Found entity 1: Multiplicador File: /home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/Multiplicador.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Multiplicador_TB.v
+    Info (12023): Found entity 1: Multiplicador_TB File: /home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/Multiplicador_TB.v Line: 3
 Info (12127): Elaborating entity "Multiplicador" for the top level hierarchy
 Info (12128): Elaborating entity "ACC" for hierarchy "ACC:U0" File: /home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/Multiplicador.v Line: 31
 Info (12128): Elaborating entity "Adder" for hierarchy "Adder:U1" File: /home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/Multiplicador.v Line: 41
 Info (12128): Elaborating entity "CONTROL" for hierarchy "CONTROL:U2" File: /home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/Multiplicador.v Line: 52
 Info (12128): Elaborating entity "Counter" for hierarchy "Counter:U3" File: /home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/Multiplicador.v Line: 62
-Warning (10230): Verilog HDL assignment warning at Counter.v(12): truncated value with size 32 to match size of target (3) File: /home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/Counter/Counter.v Line: 12
+Warning (10230): Verilog HDL assignment warning at Counter.v(18): truncated value with size 32 to match size of target (3) File: /home/gabriel/Documents/UNIFEI/Semestres/2025_1/ELTD15A/Trabalho01/Multiplier_ShiftAdd/Multiplicador/Counter/Counter.v Line: 18
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 51 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 47 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 10 output pins
-    Info (21061): Implemented 31 logic cells
+    Info (21061): Implemented 27 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 977 megabytes
-    Info: Processing ended: Mon May 19 22:54:52 2025
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Peak virtual memory: 978 megabytes
+    Info: Processing ended: Tue May 20 22:16:55 2025
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:19
 
 

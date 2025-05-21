@@ -1,17 +1,23 @@
 module Counter (
 	input Load, Clk,
-	output K
+	output reg K
 );
 
-	reg [2:0]count = 0;
+	reg [2:0]count;
 
-	always @(posedge Clk, posedge Load) begin
-		if (Load)
+	always @(posedge Clk) begin
+		if (Load) begin
 			count <= 3'b000;
-		else
+			K <= 1'b0;
+		end
+		else if (count == 3'b110) begin
+            count <= 3'b000;
+			K <= 1'b1;
+		end
+		else begin
 			count <= count + 1;
+			K <= 1'b0;
+		end
 	end
-
-	assign K = (count == 3'b110 & ~Load);
 
 endmodule

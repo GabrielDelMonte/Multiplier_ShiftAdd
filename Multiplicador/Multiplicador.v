@@ -17,7 +17,7 @@ module Multiplicador(
 	wire Sh;
 	wire K;
 	wire M;
-	
+
 
 // ACC
 /*

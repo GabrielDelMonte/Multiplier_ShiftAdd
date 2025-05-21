@@ -10,7 +10,7 @@ module CONTROL (
 
 	reg [1:0] state = S0;
 
-	always @(posedge Clk) begin
+	always @(*) begin
 		Idle <= 0;
 		Load <= 0;
 		Sh 	 <= 0;
@@ -23,7 +23,7 @@ module CONTROL (
 					Load <= 1;
 			end
 			S1:
-				if(M)
+				if (M)
 					Ad <= 1;
 			S2:
 				Sh <= 1;
@@ -36,10 +36,10 @@ module CONTROL (
 
 	always @(posedge Clk) begin
 		case (state)
-			S0: state <= (St) ? S1 : S0;
-			S1:	state <= S2;
-			S2: state <= (K) ? S3 : S1;
-			S3: state <= S0;
+			S0: 	 state <= (St) ? S1 : S0;
+			S1:		 state <= S2;
+			S2: 	 state <= (K) ? S3 : S1;
+			S3: 	 state <= S0;
 			default: state <= S0;
 		endcase
 	end

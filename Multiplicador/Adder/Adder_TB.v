@@ -44,7 +44,6 @@ module Adder_TB();
 		begin
 			OperandoA = a;
 			OperandoB = b;
-			#5;
 			$display("[%0t] A=%d, B=%d, Soma=%d", $time, a, b, Soma);
 		end
 	endtask

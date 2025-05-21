@@ -53,17 +53,16 @@ module ACC_TB();
 
 	task Load_Test;
 		input [8:0] data;
-			begin
+		begin
 			@(negedge Clk);
-				$display("\n[%0t] Starting Load Test", $time);
-				Load = 1;
-				Entradas = data;
+			$display("\n[%0t] Starting Load Test", $time);
+			Load = 1;
+			Entradas = data;
 
 			@(posedge Clk);
-				#1;
-				$display("[%0t] Data Loaded: Input=%d, Output=%d", 
-				$time, Entradas, Saidas);
-				Load = 0;
+			$display("[%0t] Data Loaded: Input=%d, Output=%d", 
+			$time, Entradas, Saidas);
+			Load = 0;
 		end
 	endtask
 
@@ -71,14 +70,13 @@ module ACC_TB();
 		input [8:0] data;
 		begin
 			@(negedge Clk);
-				$display("\n[%0t] Starting Shift Test", $time);
-				Sh = 1;
-				Entradas = data;
+			$display("\n[%0t] Starting Shift Test", $time);
+			Sh = 1;
+			Entradas = data;
 
 			@(posedge Clk);
-				#1;
-				$display("[%0t] After Shift: Output=%d", $time, Saidas);
-				Sh = 0;
+			$display("[%0t] After Shift: Output=%d", $time, Saidas);
+			Sh = 0;
 		end
 	endtask
 
@@ -86,14 +84,13 @@ module ACC_TB();
 		input [8:0] data;
 		begin
 			@(negedge Clk);
-				$display("\n[%0t] Starting Add Test", $time);
-				Ad = 1;
-				Entradas = data;
+			$display("\n[%0t] Starting Add Test", $time);
+			Ad = 1;
+			Entradas = data;
 
 			@(posedge Clk);
-				#1;
-				$display("[%0t] After Add: Output=%d", $time, Saidas);
-				Ad = 0;
+			$display("[%0t] After Add: Output=%d", $time, Saidas);
+			Ad = 0;
 		end
 	endtask
 
